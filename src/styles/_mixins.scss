@@ -1,0 +1,15 @@
+@mixin align($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+}
+
+@mixin card($bgc) {
+  margin-top: 5vh;
+  width: 70vw;
+  justify-content: space-around;
+  background-color: $bgc;
+  opacity: 0.9;
+  color: white;
+  box-shadow: 6px 6px 12px gray;
+}

@@ -1,0 +1,32 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+.introduce {
+  @include align(column);
+  margin-top: 14vh;
+  h1 {
+    font-size: $subtitle-size;
+  }
+  &__card {
+    @include align(row);
+    @include card(rgb(182, 170, 170));
+    height: 18vw;
+    &__myIcon {
+      width: 12vw;
+      height: 12vw;
+      border-radius: 50%;
+      border: solid 2.5px rgb(183, 185, 134);
+      object-fit: cover;
+    }
+    &__sentence {
+      text-align: center;
+      font-size: 2vw;
+      h3 {
+        margin-bottom: 5%;
+        font-size: 1em;
+      }
+      p {
+        font-size: 0.8em;
+      }
+    }
+  }
+}

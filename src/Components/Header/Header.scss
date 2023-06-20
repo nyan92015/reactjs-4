@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(39, 37, 37);
+  color: white;
+  height: 8.5vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  &__logo {
+    font-size: 25px;
+  }
+  &__nav {
+    ul li {
+      list-style: none;
+      display: inline-block;
+      margin-right: 5vw;
+      a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+          color: rgb(169, 72, 72);
+        }
+      }
+    }
+  }
+}

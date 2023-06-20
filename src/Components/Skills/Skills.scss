@@ -1,0 +1,57 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+.skills {
+  @include align(column);
+  width: 70vw;
+  padding-bottom: 10vh;
+  margin-top: 7vh;
+  h1 {
+    font-size: $subtitle-size;
+  }
+  &__accordion {
+    @include card(rgb(42, 168, 14));
+    &__skill-type {
+      width: 90%;
+      margin: 5% 0 5% 5%;
+      background-color: rgb(93, 200, 15);
+      text-align: center;
+      &__name {
+        @include align(row);
+        height: 5vw;
+        font-size: 2vw;
+        position: relative;
+        justify-content: space-evenly;
+        h3 {
+          font-size: 1em;
+        }
+        span {
+          font-size: 1.5em;
+          position: absolute;
+          top: 50%;
+          right: 15%;
+          transform: translateY(-60%);
+        }
+      }
+      &__content {
+        @include align(column);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s ease;
+        div {
+          @include align(row);
+          height: 7vw;
+          justify-content: space-around;
+          font-size: 2vw;
+          p {
+            width: 25vw;
+            word-break: break-all;
+            font-size: 1em;
+          }
+        }
+      }
+      & .expanded {
+        max-height: 100vh;
+      }
+    }
+  }
+}

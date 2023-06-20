@@ -48,7 +48,7 @@ const skillsData_BE: skill[] = [
     level: "覚えたて",
   },
   {
-    skill: "Larvel",
+    skill: "Laravel",
     level: "覚えたて",
   },
 ];

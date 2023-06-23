@@ -7,7 +7,7 @@ const Header = () => {
       <nav className="header__nav">
         <ul>
           <li>
-            <a href="https://github.com/nyan92015">Gtihub</a>
+            <a href="https://github.com/nyan92015">Github</a>
           </li>
           <li>
             <a href="https://qiita.com/nyan92015">Qiita</a>

@@ -3,23 +3,25 @@ import Carousel from "react-material-ui-carousel";
 import { product, productsData } from "./productsData";
 import "./Products.scss";
 const Products = () => {
-  const productList = productsData.map((productData: product) => (
-    <div className="products__carousel__product" key={productData.id}>
-      <img
-        className="products__carousel__product__image"
-        src={productData.url}
-        alt="画像"
-      />
-      <div className="products__carousel__product__sentence">
-        <h3 className="products__carousel__product__sentence__title">
-          {productData.title}
-        </h3>
-        <p className="products__carousel__product__sentence__detail">
-          {productData.detail}
-        </p>
+  const productList = productsData.map(
+    (productData: product, index: number) => (
+      <div className="products__carousel__product" key={index}>
+        <img
+          className="products__carousel__product__image"
+          src={productData.url}
+          alt="画像"
+        />
+        <div className="products__carousel__product__sentence">
+          <h3 className="products__carousel__product__sentence__title">
+            {productData.title}
+          </h3>
+          <p className="products__carousel__product__sentence__detail">
+            {productData.detail}
+          </p>
+        </div>
       </div>
-    </div>
-  ));
+    )
+  );
   return (
     <div className="products">
       <h1 className="products__subtitle">techtrainで作ったもの</h1>

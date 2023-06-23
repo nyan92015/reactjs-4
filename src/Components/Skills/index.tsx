@@ -7,15 +7,17 @@ const Skills = () => {
 
   const toggleAccordion = (index: number) => {
     if (expandedIndices.includes(index)) {
-      setExpandedIndices(expandedIndices.filter((item) => item !== index));
+      setExpandedIndices(
+        expandedIndices.filter((item: number) => item !== index)
+      );
     } else {
       setExpandedIndices([...expandedIndices, index]);
     }
   };
 
   const skills = (skillsData: skill[]): JSX.Element[] => {
-    return skillsData.map((skillData: skill) => (
-      <div>
+    return skillsData.map((skillData: skill, index: number) => (
+      <div key={index}>
         <p>{skillData.skill}</p>
         <p>{skillData.level}</p>
       </div>
